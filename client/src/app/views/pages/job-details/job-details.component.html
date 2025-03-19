@@ -1,0 +1,23 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <!-- <c-card-header>Date Posted - {{ job?.created_date | date:'yyyy-MM-dd' }}</c-card-header> -->
+      <c-card-body>
+        <h5 cCardTitle> {{ job?.title }}</h5>
+        <strong cCardSubtitle>Minimum Qualification</strong>
+        <p cCardText>{{job?.min_qualification}}</p>
+        <strong cCardSubtitle>Required Skills</strong>
+        <p cCardText>{{ job?.required_experience }} Years experience</p>
+        <p cCardText>{{ job?.required_skills }}</p>
+        <strong cCardSubtitle>Job Description</strong>
+        <p cCardText>{{ job?.job_description }}</p>
+        <strong cCardSubtitle>Max Salary</strong>
+        <p cCardText>N${{ job?.max_salary }}</p>
+        <strong>Please make sure profile is up to date before applying </strong><br>
+        <button cButton (click)="postJobApplication()">Apply</button>
+      </c-card-body>
+    </c-card>
+    
+  </c-col>
+
+</c-row>

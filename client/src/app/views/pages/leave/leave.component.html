@@ -1,0 +1,35 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3" [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+            <c-col md="4">
+              <label cLabel for="name">Leave Type</label>
+              <select aria-label="leave_type" cformControl id="leave_type" formControlName="leave_type" cSelect>
+                <option>Choose..</option>
+                <option value="Annual">Annual</option>
+                <option value="Sickness">Sickness</option>
+                <option value="Bereavement">Bereavement</option>
+                <option value="Maternity">Maternity</option>
+                <option value="Paternity">Paternity</option>
+                <option value="Study">Study</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="priority">Start Date</label>
+              <input cFormControl id="start_date" formControlName="starting_date" type="date">
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Id">End Date</label>
+              <input cFormControl id="end_date" formControlName="end_date" type="date">
+            </c-col>
+            <c-col md="12">
+              <button cButton color="primary" type="submit" >Submit</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

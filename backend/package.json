@@ -1,0 +1,22 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "node src/server.js",
+        "dev": "nodemon src/server.js"
+    },
+    "dependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "bcryptjs": "^3.0.2",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "html-pdf": "^3.0.1",
+        "mysql": "^2.18.1",
+        "pdf-master": "^1.1.0",
+        "pdfkit": "^0.16.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.9"
+    }
+}

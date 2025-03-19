@@ -1,0 +1,43 @@
+<div class="bg-light dark:bg-transparent min-vh-100 d-flex flex-row align-items-center">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col lg="7" md="9" xl="6">
+        <c-card class="mx-4">
+          <c-card-body class="p-4">
+            <form cForm [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <h1>HR Dashboard</h1>
+              <p class="text-body-secondary">Login</p>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilPeople"></svg>
+                </span>
+                <select cSelect cFormControl id="user_type" formControlName="user_type">
+                  <option>Select</option>
+                  <option value="Client">Employee</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilUser"></svg>
+                </span>
+                <input autoComplete="name" cFormControl placeholder="Username" id="user_id" formControlName="user_id" />
+              </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilLockLocked"></svg>
+                </span>
+                <input autoComplete="new-password" cFormControl placeholder="Password" type="password" id="user_password" formControlName="user_password" />
+              </c-input-group>
+              <div class="d-grid">
+                <button cButton color="success" type="submit">Login</button>
+              </div>
+            </form>
+
+          </c-card-body>
+            <c-alert *ngIf="showAlert" color="danger">Enter login details</c-alert>
+        </c-card>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>

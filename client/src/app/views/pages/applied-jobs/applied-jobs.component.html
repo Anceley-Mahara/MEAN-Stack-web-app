@@ -1,0 +1,32 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Applied Vacancies</strong>
+      </c-card-header>
+      <c-card-body>
+        <app-docs-example href="components/table#variants">
+            <table cTable>
+              <thead>
+                <tr>
+                  <th scope="col">Date Posted</th>
+                  <th scope="col">Job Title</th>
+                  <th scope="col">Job Id</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let job of Appliedjobs; let i = index">
+                  <th scope="row">{{ job.created_date | date:'yyyy-MM-dd' }}</th>
+                  <td>{{ job.job_applied_title }}</td>
+                  <td>{{ job.vacancy_id }}</td>
+                </tr>
+                <tr *ngIf="!Appliedjobs || Appliedjobs.length === 0">
+                  <td colspan="3" class="text-center">No applied jobs found</td>
+                </tr>
+              </tbody>
+            </table>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

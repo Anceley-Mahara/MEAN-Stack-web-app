@@ -1,0 +1,26 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <!-- <c-card-header>Date Posted - {{ job?.created_date | date:'yyyy-MM-dd' }}</c-card-header> -->
+      <c-card-body>
+        <h5 cCardTitle> Date </h5>
+        <p cCardText>{{ request?.created_date | date:'yyyy-MM-dd' }}</p>
+        <strong cCardSubtitle>Status And Priority</strong>
+        <p cCardText>{{ request?.request_status }} | {{ request?.request_priority }}</p>
+        <strong cCardSubtitle>Category</strong>
+        <p cCardText>{{ request?.request_type }}</p>
+        <strong cCardSubtitle>Request Description</strong>
+        <p cCardText>{{ request?.request_description }}</p>
+        <strong>Update Status after completing the request </strong><br>
+
+        <select [(ngModel)]="request.request_status" class="form-select mb-3 custom-select">
+          <option value="Pending">Pending</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <button cButton (click)="updateRequest()">Update Status</button>
+      </c-card-body>
+    </c-card>
+
+  </c-col>
+
+</c-row>

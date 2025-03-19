@@ -1,0 +1,60 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <!-- <c-card-header>
+        <strong>Angular Table</strong> <small>Bordered tables</small>
+      </c-card-header> -->
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3" [formGroup]="payslipForm" (ngSubmit)="onSubmit()">
+            <c-col md="4">
+              <label cLabel for="name">Employee ID</label>
+              <input cFormControl id="employee_id" type="text" formControlName="employee_id" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="surname">Month</label>
+              <select cSelect id="month" formControlName="month">
+                <option>Choose...</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Id">Year</label>
+              <input cFormControl id="year" type="number" min="1900" max="2099" formControlName="year" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="dob">Basic Salary</label>
+              <input cFormControl id="basic_salary" type="number" formControlName="basic_salary" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="inputEmail4">Total Allowances</label>
+              <input cFormControl id="allowances" type="number" formControlName="allowances" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="deductions">Total Deductions</label>
+              <input cFormControl id="deductions" type="number" formControlName="deductions" />
+            </c-col>
+            <!-- <c-col md="4">
+              <label cLabel for="net_salary">Net Salary</label>
+             <input type="text" cFormControl id="net_salary" formControlName="net_salary" />
+            </c-col> -->
+            <c-col md="12">
+              <button cButton color="primary" type="submit" >Generate Payslip</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

@@ -1,0 +1,58 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+            <c-col md="4">
+              <label cLabel for="name">First Name</label>
+              <input cFormControl id="first_name" type="text" formControlName="first_name" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="surname">Last Name</label>
+              <input cFormControl id="last_name" type="text" formControlName="last_name" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Id">ID/ Passport</label>
+              <input cFormControl id="employee_id" type="text" formControlName="employee_id" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="dob">Date Of Birth</label>
+              <input cFormControl id="date_of_birth" type="date" formControlName="date_of_birth" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="inputEmail4">Email</label>
+              <input cFormControl id="email" type="email" formControlName="email" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="jobTitle">Job Title</label>
+              <input cFormControl id="job_title" type="text" formControlName="job_title" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="department">Department</label>
+              <select cSelect id="department" formControlName="department">
+                <option>Choose...</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Legal">Legal</option>
+                <option value="Security">Security</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="hireDate">Date Started</label>
+              <input cFormControl id="hire_date" type="date" formControlName="hire_date"/>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="salary">Salary</label>
+              <input cFormControl id="salary" type="number" formControlName="salary"/>
+            </c-col>
+            <c-col md="12">
+              <button cButton color="primary" type="submit" >Add</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

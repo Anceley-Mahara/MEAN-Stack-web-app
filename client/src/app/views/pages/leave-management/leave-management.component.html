@@ -1,0 +1,47 @@
+<c-row ngPreserveWhitespaces>
+<c-col xs="12">
+  <c-card class="mb-4">
+    <c-card-header>
+      <!-- <strong>Angular Table</strong> <small>Bordered tables</small> -->
+    </c-card-header>
+    <c-card-body>
+      <!-- <p class="text-body-secondary small">
+        Add <code>bordered</code> property for borders on all sides of the table and cells.
+      </p> -->
+      <app-docs-example href="components/table#bordered-tables">
+        <table [bordered]="true" cTable>
+          <thead>
+          <tr>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Leave Type</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Approve</th>
+            <th scope="col">Reject</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>&#64;mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>&#64;fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colSpan="2">Larry the Bird</td>
+            <td>&#64;twitter</td>
+          </tr>
+          </tbody>
+        </table>
+      </app-docs-example>
+    </c-card-body>
+  </c-card>
+</c-col>
+</c-row>

@@ -1,0 +1,37 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3" [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+            <c-col md="6">
+              <label cLabel for="name">Request Type</label>
+              <select aria-label="request_type" cformControl id="request_type" formControlName="request_type" cSelect>
+                <option>Choose..</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                <option value="Administration">Administration</option>
+              </select>
+            </c-col>
+            <c-col md="6">
+              <label cLabel for="priority">Priority</label>
+              <select aria-label="request_priority" cformControl id="request_priority" formControlName="request_priority" cSelect>
+                <option>Choose..</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </c-col>
+            <c-col md="12">
+              <label cLabel for="Id">Description</label>
+              <textarea cFormControl id="request_description" formControlName="request_description" rows="3"></textarea>
+            </c-col>
+            <c-col md="12">
+              <button cButton color="primary" type="submit" >Submit</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

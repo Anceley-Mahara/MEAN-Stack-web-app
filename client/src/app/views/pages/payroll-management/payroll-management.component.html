@@ -1,0 +1,60 @@
+<c-row ngPreserveWhitespaces>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Search Payslips</strong>
+      </c-card-header>
+      <c-card-body>
+        <p class="text-body-secondary small">
+          Use ID/ Passport Number
+        </p>
+        <app-docs-example href="forms/validation">
+          <form #customStylesForm="ngForm" (ngSubmit)="onSubmit()" [formGroup]="searchForm"
+           [validated]="customStylesValidated" cForm class="row g-3 needs-validation">
+            <c-col xs="6">
+              <input cFormControl id="employee_id" required type="text" formControlName="employee_id" placeholder="Input ID" />
+            </c-col>
+            <c-col xs="6">
+              <button cButton class="me-1" color="primary" type="submit">
+                Search
+              </button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-header>
+        <strong>Generated Payslips</strong>
+      </c-card-header>
+      <c-card-body>
+        <app-docs-example href="components/table#variants">
+            <table cTable>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Month</th>
+                  <th scope="col">Employee Id</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let payslip of payslips; let i = index">
+                  <th scope="row">{{ payslip.payslip_id }}</th>
+                  <td>{{ payslip.month }}</td>
+                  <td>{{ payslip.employee_id }}</td>
+                  <td>
+                    <a cButton color="primary" class="me-1" (click)="downloadPayslip(payslip.payslip_id)">
+                      Download PDF
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>

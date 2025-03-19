@@ -1,0 +1,32 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3">
+            <c-col md="4">
+              <label cLabel for="name">First Name</label>
+              <input cFormControl id="first_name" type="text" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="surname">Last Name</label>
+              <input cFormControl id="last_name" type="text" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="Usertype">User Type</label>
+              <select cSelect id="user_type">
+                <option>Choose...</option>
+                <option value="Admin">Admin</option>
+                <option value="Client">Client</option>
+              </select>
+            </c-col>
+            <c-col md="12">
+              <button cButton color="primary">Create User</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+     <small> User Id and password will be automatically generated. Check in the database after creating user profile</small>
+    </c-card>
+  </c-col>
+</c-row>

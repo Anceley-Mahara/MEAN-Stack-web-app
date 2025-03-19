@@ -1,0 +1,61 @@
+<c-row>
+  <c-col xs="12">
+    <c-card class="mb-4">
+      <c-card-body>
+        <app-docs-example href="forms/layout#gutters">
+          <form cForm class="row g-3">
+            <c-col md="4">
+              <label cLabel for="job_title">Job Title</label>
+              <input cFormControl id="job_title" type="text" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="min_qualification">Minimum Qualification</label>
+              <select cSelect id="min_qualification">
+                <option>Choose...</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelors">Bachelors</option>
+                <option value="Honors">Honors</option>
+                <option value="Masters">Masters</option>
+                <option value="Certificate">Certificate</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="department">Department</label>
+              <select cSelect id="department">
+                <option>Choose...</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Legal">Legal</option>
+                <option value="Security">Security</option>
+              </select>
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="min_salary">Minimum Salary</label>
+              <input cFormControl id="min_salary" type="number" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="max_salary">MaximumSalary</label>
+              <input cFormControl id="max_salary" type="number" />
+            </c-col>
+            <c-col md="4">
+              <label cLabel for="min_experience">Minimum Experience</label>
+              <input cFormControl id="min_experience" type="number" />
+            </c-col>
+            <c-col md="12">
+              <label cLabel for="req_skills">Required Skills</label>
+              <textarea cFormControl id="required_skills"></textarea>
+            </c-col>
+            <c-col md="12">
+              <label cLabel for="job_description">Job Description</label>
+              <textarea cFormControl id="job_description"></textarea>
+            </c-col>
+            <c-col md="12">
+              <button cButton color="primary">Post</button>
+            </c-col>
+          </form>
+        </app-docs-example>
+      </c-card-body>
+    </c-card>
+  </c-col>
+</c-row>
